@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y \
   jq \
   && rm -rf /var/lib/apt/lists/*
 
-RUN addgroup runner && \
-  adduser \
+RUN groupadd runner && \
+  useradd \
   --system \
   --disabled-password \
   --home /home/runner \
